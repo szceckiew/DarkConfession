@@ -348,7 +348,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1.5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -411,7 +411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1856375781}
-  speed: 200
+  speed: 400
   nextWaypointDistance: 3
 --- !u!1 &233549977
 GameObject:
@@ -464,7 +464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &302112487
 Transform:
   m_ObjectHideFlags: 0
@@ -1780,10 +1780,11 @@ MonoBehaviour:
   pathHolder: {fileID: 88503568}
   waypoints: []
   targetWaypointIndex: 1
+  distanceToTarget: 0
+  aipath: {fileID: 587115030}
   playerMovementController: {fileID: 0}
   destinationSetter: {fileID: 587115029}
   guardState: 0
-  guardStateCheck: 0
 --- !u!114 &587115029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1835,7 +1836,7 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 0
   pickNextWaypointDist: 0.5
-  endReachedDistance: 0.2
+  endReachedDistance: 0.5
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -3635,7 +3636,7 @@ MonoBehaviour:
   manualDebugFloorRoof: 0
   showSearchTree: 0
   unwalkableNodeDebugSize: 0.3
-  logPathResults: 1
+  logPathResults: 4
   maxNearestNodeDistance: 100
   scanOnStartup: 1
   fullGetNearestSearch: 0
