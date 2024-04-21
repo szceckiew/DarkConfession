@@ -1,13 +1,27 @@
+using JetBrains.Annotations;
+using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Guard : MonoBehaviour
 {
+    //Patrolling
     public float speed = 1;
     public float waitTime = .3f;
+    public Transform pathHolder;
+    [SerializeField] public Transform[] waypoints;
+    Transform targetWaypoint;
+    [SerializeField] int targetWaypointIndex = 1;
+    [SerializeField] float distanceToTarget = 10;
+    public AIPath aipath;
 
 
+    //Pathfinding
+    public PlayerMovementController playerMovementController;
+    public AIDestinationSetter destinationSetter;
+
+    //guard states
     public enum guardStates
     {
         Patrol,
@@ -15,45 +29,107 @@ public class Guard : MonoBehaviour
         Investigate
     }
 
+    //guard state at the start
     public guardStates guardState = guardStates.Patrol;
 
 
-    public Transform pathHolder;
+
 
     private void Start()
     {
-        Vector3[] waypoints = new Vector3[pathHolder.childCount];
-        for (int i = 0; i< waypoints.Length; i++)
-        {
-            waypoints[i] = pathHolder.GetChild(i).position;
-            waypoints[i] = new Vector3(waypoints[i].x, waypoints[i].y, 0);
-        }
 
+
+        //Patrolling
+        waypoints = new Transform[pathHolder.childCount];
+        for (int i = 0; i < waypoints.Length; i++)
+        {
+            waypoints[i] = pathHolder.GetChild(i).transform;
+            
+        }
+        targetWaypoint = waypoints[targetWaypointIndex];
+
+        //Pathfinding
+        playerMovementController = GameObject.FindAnyObjectByType<PlayerMovementController>();
+
+        
+        //Start default behaviour
         StartCoroutine(FollowPath(waypoints));
 
     }
 
-    IEnumerator FollowPath(Vector3[] waypoints)
+    //guard state update
+    private void GuardStateUpdate()
     {
-        transform.position = waypoints[0];
+        Debug.Log("Guard Status Update");
+        switch (guardState)
+        {
+            case guardStates.Patrol:
+                StartCoroutine(FollowPath(waypoints));
+                break;
+            case guardStates.Chase:
+                StartCoroutine(ChasePlayer());
+                break;
+        }
+    }
 
-        int targetWaypointIndex = 1;
-        Vector3 targetWaypoint = waypoints[targetWaypointIndex];
+    
+
+
+    //patrolling loop
+    IEnumerator FollowPath(Transform[] waypoints)
+    {
+
+        //patrolling
+        //transform.position = waypoints[0];
+        destinationSetter.target = targetWaypoint;
 
         while (guardState == guardStates.Patrol)
         {
-            transform.position = Vector3.MoveTowards (transform.position, targetWaypoint, speed * Time.deltaTime);
-            if (transform.position ==  targetWaypoint)
+            if (aipath.path != null)
             {
-                targetWaypointIndex = (targetWaypointIndex + 1) % waypoints.Length;
-                targetWaypoint = waypoints[targetWaypointIndex];
-                yield return new WaitForSeconds (waitTime);
+                if (aipath.path.GetTotalLength() <= 0.5)
+                {
+                    targetWaypointIndex = (targetWaypointIndex + 1) % waypoints.Length;
+                    targetWaypoint = waypoints[targetWaypointIndex];
+                    destinationSetter.target = targetWaypoint;
+                    yield return new WaitForSeconds(waitTime);
+                }
             }
+            
+
             yield return null;
         }
 
+        GuardStateUpdate();
     }
 
+
+    //chasing player loop
+    IEnumerator ChasePlayer()
+    {
+        //chasing
+        while (guardState == guardStates.Chase)
+        {
+            destinationSetter.target = playerMovementController.transform;
+            if (aipath.path != null)
+            {
+                distanceToTarget = aipath.path.GetTotalLength();
+            }
+            //playerMovementController.transform;
+            yield return null;
+        }
+        destinationSetter.target = pathHolder.GetChild(targetWaypointIndex).transform;
+
+
+
+        if (distanceToTarget < 1)
+        {
+            GuardStateUpdate();
+        }
+        
+    }
+
+    //Gizmos drawing
     private void OnDrawGizmos()
     {
         Vector3 startPosition = pathHolder.GetChild(0).position;
