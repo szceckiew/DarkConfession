@@ -129,6 +129,19 @@ public class Guard : MonoBehaviour
         
     }
 
+    public void Die()
+    {
+        //turning off every guard script and collider
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<Seeker>().enabled = false;
+        GetComponent<AIPath>().enabled = false;
+        GetComponent<AIDestinationSetter>().enabled = false;
+
+        this.enabled = false;
+    }
+
+
+
     //Gizmos drawing
     private void OnDrawGizmos()
     {
