@@ -3982,10 +3982,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7c3bd1ac87718547b6b1d2cdd4942c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPickup: {fileID: 0}
-  pickupValue: 0
-  pickupRange: 0.7
-  pickUpsLayer:
+  interactibleObject: {fileID: 0}
+  interactValue: 0
+  interactRange: 0.7
+  InteractableLayer:
     serializedVersion: 2
     m_Bits: 128
 --- !u!1 &1922516225
