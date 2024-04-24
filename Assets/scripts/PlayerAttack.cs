@@ -6,11 +6,20 @@ public class PlayerAttack : MonoBehaviour
 {
 
     public GameObject Circle;
-    [SerializeField] float fire;
+
+    //melee attack
+    [SerializeField] float swing;
     float atkDuration = 0.3f;
     float atkTimer = 0f;
     bool isAttacking = false;
 
+    //ranged attack
+    [SerializeField] float fire;
+    public Transform Aim;
+    public GameObject bullet;
+    public float fireForce = 10f;
+    float shootCooldown = 0.25f;
+    float shootTimer = 0.5f;
 
     public void Attack()
     {
@@ -21,6 +30,17 @@ public class PlayerAttack : MonoBehaviour
             //animation here
         }
     }
+
+    public void Fire()
+    {
+        if (shootTimer > shootCooldown)
+        {
+            shootTimer = 0f;
+            GameObject intBullet = Instantiate(bullet, Aim.position, Aim.rotation);
+            intBullet.GetComponent<Rigidbody2D>().AddForce(-Aim.up * fireForce, ForceMode2D.Impulse);
+        }
+    }
+
     void checkAtkTimer()
     {
         if (isAttacking)
@@ -38,15 +58,24 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
-        fire = Input.GetAxisRaw("Fire1");
+        checkAtkTimer();
+        shootTimer += Time.deltaTime;
+
+        swing = Input.GetAxisRaw("Fire1");
+        fire = Input.GetAxisRaw("Fire2");
 
     }
 
     void FixedUpdate()
     {
-        if (fire > 0)
+        if (swing > 0)
         {
             Attack();
+        }
+
+        if (fire > 0)
+        {
+            Fire();
         }
     }
 

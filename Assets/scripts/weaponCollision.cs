@@ -4,13 +4,28 @@ using UnityEngine;
 
 public class weaponCollision : MonoBehaviour
 {
+    public enum WeaponType { Melee, Bullet}
+    public WeaponType weaponType;
+    public int bulletDestrlayerNumber;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("weaponCollision");
+        
+        if (collision.gameObject.layer == bulletDestrlayerNumber)
+        {
+            Destroy(gameObject);
+        }
+
+
         Guard guard = collision.GetComponent<Guard>();
         if (guard != null)
         {
             guard.Die();
+            if (weaponType == WeaponType.Bullet)
+            {
+                Destroy(gameObject);
+            }
+
         }
     }
 
