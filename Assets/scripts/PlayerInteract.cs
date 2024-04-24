@@ -36,10 +36,9 @@ public class PlayerInteract : MonoBehaviour
         foreach (Collider2D interactable in interactables)
         {
             // pickUp logic
-            interactable.GetComponent<Renderer>().enabled = false;
-            interactable.GetComponent<Collider2D>().enabled = false;
+            
 
-            InteractSuccessful(interactable.GetComponent<Renderer>().name);
+            InteractSuccessful(interactable);
 
         }
     }
@@ -52,11 +51,13 @@ public class PlayerInteract : MonoBehaviour
     }
 
     // different interactables items
-    void InteractSuccessful(string name)
+    void InteractSuccessful(Collider2D interactable)
     {
-        switch (name)
+        switch (interactable.GetComponent<Renderer>().name)
         {
             case string greenDot_0:
+                interactable.GetComponent<Renderer>().enabled = false;
+                interactable.GetComponent<Collider2D>().enabled = false;
                 Debug.Log("You interacted with a green Dot: It disappeared");
                 break;
             default:
