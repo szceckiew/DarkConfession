@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovementController : MonoBehaviour
 {
+    [SerializeField] private FieldOfView fieldOfView;
     public float moveSpeed = 4;
     public Rigidbody2D rb2d;
     private Vector2 moveInput;
@@ -37,6 +38,8 @@ public class PlayerMovementController : MonoBehaviour
         {
             isMoving = true;
         }
+
+        fieldOfView.SetOrigin(transform.position);
 
     }
 

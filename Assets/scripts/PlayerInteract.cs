@@ -83,13 +83,16 @@ public class PlayerInteract : MonoBehaviour
             case "simpleDoorSheet_0":
                 interactable.GetComponent<SpriteRenderer>().sprite = doorSprites[1];
                 interactable.GetComponent<Collider2D>().isTrigger = true;
-
+                //interactable.gameObject.layer = 0;
+                interactable.gameObject.transform.GetChild(0).transform.GetChild(0).gameObject.layer = 0;
                 Debug.Log("You opened a door");
 
                 break;
             case "simpleDoorSheet_1":
                 interactable.GetComponent<SpriteRenderer>().sprite = doorSprites[0];
                 interactable.GetComponent<Collider2D>().isTrigger = false;
+                interactable.gameObject.transform.GetChild(0).transform.GetChild(0).gameObject.layer = 12;
+
 
                 Debug.Log("You closed a door");
 

@@ -9,6 +9,7 @@ public class doorEnemyOpen : MonoBehaviour
 
     public LayerMask autoDoorOpenMask;
     public Sprite[] doorSprites;
+    public GameObject layerChanging;
 
 
     private void Start()
@@ -16,13 +17,15 @@ public class doorEnemyOpen : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(UnityEngine.Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         //bit operation to check if the colliding object is int the mask autoDoorOpenMask
         if ((autoDoorOpenMask.value & (int)Math.Pow(2, collision.gameObject.layer)) > 0)
         {
             GetComponentInParent<SpriteRenderer>().sprite = doorSprites[1];
             GetComponentInParent<BoxCollider2D>().isTrigger = true;
+            GetComponentInChildren<BoxCollider2D>().isTrigger = true;
+            layerChanging.layer = 0;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -31,6 +34,8 @@ public class doorEnemyOpen : MonoBehaviour
         {
             GetComponentInParent<SpriteRenderer>().sprite = doorSprites[0];
             GetComponentInParent<BoxCollider2D>().isTrigger = false;
+            GetComponentInChildren<BoxCollider2D>().isTrigger = true;
+            layerChanging.layer = 12;
 
         }
     }
