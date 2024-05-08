@@ -20,7 +20,7 @@ TagManager:
   - VisionBlocks
   - Obstacles
   - 
-  - 
+  - theBox
   - 
   - 
   - 
@@ -46,4 +46,10 @@ TagManager:
     locked: 0
   - name: Forground
     uniqueID: 8203457
+    locked: 0
+  - name: UpperForground
+    uniqueID: 3679239415
+    locked: 0
+  - name: UpperUpperForground
+    uniqueID: 2506702921
     locked: 0
