@@ -1,0 +1,850 @@
+fileFormatVersion: 2
+guid: 821ecc6bb0461de448ba45233d2d5faa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2637452327914516828
+    second: DARK_CONFESSION_title_V2_0
+  - first:
+      213: -3163277649559936805
+    second: DARK_CONFESSION_title_V2_1
+  - first:
+      213: 2958074849514452891
+    second: DARK_CONFESSION_title_V2_2
+  - first:
+      213: -2121313612537989922
+    second: DARK_CONFESSION_title_V2_3
+  - first:
+      213: 3160047142684173779
+    second: DARK_CONFESSION_title_V2_4
+  - first:
+      213: 5967984936361612228
+    second: DARK_CONFESSION_title_V2_5
+  - first:
+      213: 8512042251787800662
+    second: DARK_CONFESSION_title_V2_6
+  - first:
+      213: -2798446256606504964
+    second: DARK_CONFESSION_title_V2_7
+  - first:
+      213: 2545552665279687025
+    second: DARK_CONFESSION_title_V2_8
+  - first:
+      213: 7218438214492764646
+    second: DARK_CONFESSION_title_V2_9
+  - first:
+      213: 5280505617824747319
+    second: DARK_CONFESSION_title_V2_10
+  - first:
+      213: -1374407578663336857
+    second: DARK_CONFESSION_title_V2_11
+  - first:
+      213: 5995749064462981598
+    second: DARK_CONFESSION_title_V2_12
+  - first:
+      213: 1259984356978591356
+    second: DARK_CONFESSION_title_V2_13
+  - first:
+      213: 358579404744125983
+    second: DARK_CONFESSION_title_V2_14
+  - first:
+      213: 2800397157032072356
+    second: DARK_CONFESSION_title_V2_15
+  - first:
+      213: 8864221737984741655
+    second: DARK_CONFESSION_title_V2_16
+  - first:
+      213: 1632824143240702792
+    second: DARK_CONFESSION_title_V2_17
+  - first:
+      213: -1421121191005564953
+    second: DARK_CONFESSION_title_V2_18
+  - first:
+      213: 3542725058221897252
+    second: DARK_CONFESSION_title_V2_19
+  - first:
+      213: 6985833159765172371
+    second: DARK_CONFESSION_title_V2_20
+  - first:
+      213: 3608562256875459237
+    second: DARK_CONFESSION_title_V2_21
+  - first:
+      213: -8830956759209166426
+    second: DARK_CONFESSION_title_V2_22
+  - first:
+      213: -6918323848697807536
+    second: DARK_CONFESSION_title_V2_23
+  - first:
+      213: 2351412565767474613
+    second: DARK_CONFESSION_title_V2_24
+  - first:
+      213: 5530711196929099592
+    second: DARK_CONFESSION_title_V2_25
+  - first:
+      213: -3714769444336005822
+    second: DARK_CONFESSION_title_V2_26
+  - first:
+      213: 870887806225087430
+    second: DARK_CONFESSION_title_V2_27
+  - first:
+      213: -1714753205580600362
+    second: DARK_CONFESSION_title_V2_28
+  - first:
+      213: -282966915803988864
+    second: DARK_CONFESSION_title_V2_29
+  - first:
+      213: -2927300665846521963
+    second: DARK_CONFESSION_title_V2_30
+  - first:
+      213: 6704237114535829115
+    second: DARK_CONFESSION_title_V2_31
+  - first:
+      213: 7035681241197989418
+    second: DARK_CONFESSION_title_V2_32
+  - first:
+      213: 7614618638389223372
+    second: DARK_CONFESSION_title_V2_33
+  - first:
+      213: -1039557147026682155
+    second: DARK_CONFESSION_title_V2_34
+  - first:
+      213: 4689939084953035564
+    second: DARK_CONFESSION_title_V2_35
+  - first:
+      213: -7040393595613248088
+    second: DARK_CONFESSION_title_V2_36
+  - first:
+      213: 57274901827513276
+    second: DARK_CONFESSION_title_V2_37
+  - first:
+      213: 7575730227845779257
+    second: DARK_CONFESSION_title_V2_38
+  - first:
+      213: 8244300734723601621
+    second: DARK_CONFESSION_title_V2_39
+  - first:
+      213: -4775403452795120077
+    second: DARK_CONFESSION_title_V2_40
+  - first:
+      213: 3335867618478748131
+    second: DARK_CONFESSION_title_V2_41
+  - first:
+      213: -6832661824702122728
+    second: DARK_CONFESSION_title_V2_42
+  - first:
+      213: -5102317204183255346
+    second: DARK_CONFESSION_title_V2_43
+  - first:
+      213: -7469474938739375433
+    second: DARK_CONFESSION_title_V2_44
+  - first:
+      213: 1617138483228251034
+    second: DARK_CONFESSION_title_V2_45
+  - first:
+      213: -4078052334989396244
+    second: DARK_CONFESSION_title_V2_46
+  - first:
+      213: 8324721447293429709
+    second: DARK_CONFESSION_title_V2_47
+  - first:
+      213: -1167381171122365417
+    second: DARK_CONFESSION_title_V2_48
+  - first:
+      213: -1451999518133468997
+    second: DARK_CONFESSION_title_V2_49
+  - first:
+      213: 9105623756395655253
+    second: DARK_CONFESSION_title_V2_50
+  - first:
+      213: -8768018465700257257
+    second: DARK_CONFESSION_title_V2_51
+  - first:
+      213: 7352639352636437813
+    second: DARK_CONFESSION_title_V2_52
+  - first:
+      213: -5552484305208068739
+    second: DARK_CONFESSION_title_V2_53
+  - first:
+      213: 6109162053250979460
+    second: DARK_CONFESSION_title_V2_54
+  - first:
+      213: -2345246068901616544
+    second: DARK_CONFESSION_title_V2_55
+  - first:
+      213: -3811464991887935248
+    second: DARK_CONFESSION_title_V2_56
+  - first:
+      213: 6949008895068693686
+    second: DARK_CONFESSION_title_V2_57
+  - first:
+      213: -1736301057127001096
+    second: DARK_CONFESSION_title_V2_58
+  - first:
+      213: -6079795589164730578
+    second: DARK_CONFESSION_title_V2_59
+  - first:
+      213: 4906233344660331227
+    second: DARK_CONFESSION_title_V2_60
+  - first:
+      213: 1292919191326892279
+    second: DARK_CONFESSION_title_V2_61
+  - first:
+      213: 4473710394675009486
+    second: DARK_CONFESSION_title_V2_62
+  - first:
+      213: -5827055572551971552
+    second: DARK_CONFESSION_title_V2_63
+  - first:
+      213: -6802295282113573318
+    second: DARK_CONFESSION_title_V2_64
+  - first:
+      213: 6582244933067634855
+    second: DARK_CONFESSION_title_V2_65
+  - first:
+      213: 4390368750537621534
+    second: DARK_CONFESSION_title_V2_66
+  - first:
+      213: 8053985720275417659
+    second: DARK_CONFESSION_title_V2_67
+  - first:
+      213: -8634017313723673008
+    second: DARK_CONFESSION_title_V2_68
+  - first:
+      213: 7761506232366618939
+    second: DARK_CONFESSION_title_V2_69
+  - first:
+      213: -5488002057988029225
+    second: DARK_CONFESSION_title_V2_70
+  - first:
+      213: -49333335961297748
+    second: DARK_CONFESSION_title_V2_71
+  - first:
+      213: 1496325442748018648
+    second: DARK_CONFESSION_title_V2_72
+  - first:
+      213: -8731654245788049648
+    second: DARK_CONFESSION_title_V2_73
+  - first:
+      213: 7381611335895819549
+    second: DARK_CONFESSION_title_V2_74
+  - first:
+      213: 6133154805752889730
+    second: DARK_CONFESSION_title_V2_75
+  - first:
+      213: -7758358330250747504
+    second: DARK_CONFESSION_title_V2_76
+  - first:
+      213: -469856573356125136
+    second: DARK_CONFESSION_title_V2_77
+  - first:
+      213: -3731879504236060668
+    second: DARK_CONFESSION_title_V2_78
+  - first:
+      213: -9139050816245384999
+    second: DARK_CONFESSION_title_V2_79
+  - first:
+      213: -1551794845151224757
+    second: DARK_CONFESSION_title_V2_80
+  - first:
+      213: 2053479511540077859
+    second: DARK_CONFESSION_title_V2_81
+  - first:
+      213: 3554931761288400109
+    second: DARK_CONFESSION_title_V2_82
+  - first:
+      213: -1290294556854720155
+    second: DARK_CONFESSION_title_V2_83
+  - first:
+      213: -7911919058838030277
+    second: DARK_CONFESSION_title_V2_84
+  - first:
+      213: 6942263082689485003
+    second: DARK_CONFESSION_title_V2_85
+  - first:
+      213: 7463663179228344483
+    second: DARK_CONFESSION_title_V2_86
+  - first:
+      213: 4441215032139338999
+    second: DARK_CONFESSION_title_V2_87
+  - first:
+      213: 1993539891202984885
+    second: DARK_CONFESSION_title_V2_88
+  - first:
+      213: 8645468135151989758
+    second: DARK_CONFESSION_title_V2_89
+  - first:
+      213: -6886214106196624989
+    second: DARK_CONFESSION_title_V2_90
+  - first:
+      213: -1063814393984018140
+    second: DARK_CONFESSION_title_V2_91
+  - first:
+      213: -2828426447017800732
+    second: DARK_CONFESSION_title_V2_92
+  - first:
+      213: 1921147135686512919
+    second: DARK_CONFESSION_title_V2_93
+  - first:
+      213: 1356862466503385060
+    second: DARK_CONFESSION_title_V2_94
+  - first:
+      213: -1730751211183905872
+    second: DARK_CONFESSION_title_V2_95
+  - first:
+      213: 1582696223056767886
+    second: DARK_CONFESSION_title_V2_96
+  - first:
+      213: 6309766167293957465
+    second: DARK_CONFESSION_title_V2_97
+  - first:
+      213: 6023323030534904791
+    second: DARK_CONFESSION_title_V2_98
+  - first:
+      213: 113991819082407596
+    second: DARK_CONFESSION_title_V2_99
+  - first:
+      213: 2577776593096615461
+    second: DARK_CONFESSION_title_V2_100
+  - first:
+      213: -7236505014181801224
+    second: DARK_CONFESSION_title_V2_101
+  - first:
+      213: 5992826017747293715
+    second: DARK_CONFESSION_title_V2_102
+  - first:
+      213: -4945255982017958708
+    second: DARK_CONFESSION_title_V2_103
+  - first:
+      213: 6099469021785402937
+    second: DARK_CONFESSION_title_V2_104
+  - first:
+      213: -1586300861997029552
+    second: DARK_CONFESSION_title_V2_105
+  - first:
+      213: 1469076577923359633
+    second: DARK_CONFESSION_title_V2_106
+  - first:
+      213: 1962674416205592188
+    second: DARK_CONFESSION_title_V2_107
+  - first:
+      213: 2416387342802468149
+    second: DARK_CONFESSION_title_V2_108
+  - first:
+      213: 9028880993458383493
+    second: DARK_CONFESSION_title_V2_109
+  - first:
+      213: -4126306737252160165
+    second: DARK_CONFESSION_title_V2_110
+  - first:
+      213: 7090888459027114635
+    second: DARK_CONFESSION_title_V2_111
+  - first:
+      213: 1772933752673857971
+    second: DARK_CONFESSION_title_V2_112
+  - first:
+      213: 2045801807375566727
+    second: DARK_CONFESSION_title_V2_113
+  - first:
+      213: -4551508900709420140
+    second: DARK_CONFESSION_title_V2_114
+  - first:
+      213: -1855383168879567038
+    second: DARK_CONFESSION_title_V2_115
+  - first:
+      213: -8122391031863948305
+    second: DARK_CONFESSION_title_V2_116
+  - first:
+      213: 3826490096889860270
+    second: DARK_CONFESSION_title_V2_117
+  - first:
+      213: -2530918651701169453
+    second: DARK_CONFESSION_title_V2_118
+  - first:
+      213: -1921923006277017116
+    second: DARK_CONFESSION_title_V2_119
+  - first:
+      213: -3000197851432160883
+    second: DARK_CONFESSION_title_V2_120
+  - first:
+      213: 7051993474525073587
+    second: DARK_CONFESSION_title_V2_121
+  - first:
+      213: -6800267387026668453
+    second: DARK_CONFESSION_title_V2_122
+  - first:
+      213: -2617419523167680647
+    second: DARK_CONFESSION_title_V2_123
+  - first:
+      213: 7167609170803636543
+    second: DARK_CONFESSION_title_V2_124
+  - first:
+      213: -2415979532208445383
+    second: DARK_CONFESSION_title_V2_125
+  - first:
+      213: 2988793615533539094
+    second: DARK_CONFESSION_title_V2_126
+  - first:
+      213: 2555297170005014690
+    second: DARK_CONFESSION_title_V2_127
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DARK_CONFESSION_title_V2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aec0a2e413e56bd0800000000000000
+      internalID: -2637452327914516828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK_CONFESSION_title_V2_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd02c0cccb7c914d0800000000000000
+      internalID: -3163277649559936805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK_CONFESSION_title_V2_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b97735037613d0920800000000000000
+      internalID: 2958074849514452891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK_CONFESSION_title_V2_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed4f87332849f82e0800000000000000
+      internalID: -2121313612537989922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK_CONFESSION_title_V2_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d5ad25322ebadb20800000000000000
+      internalID: 3160047142684173779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK_CONFESSION_title_V2_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c357bc0eaa82d250800000000000000
+      internalID: 5967984936361612228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK_CONFESSION_title_V2_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6509dea4459d02670800000000000000
+      internalID: 8512042251787800662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK_CONFESSION_title_V2_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf792f7d4fbe929d0800000000000000
+      internalID: -2798446256606504964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK_CONFESSION_title_V2_8
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1796b0389ae935320800000000000000
+      internalID: 2545552665279687025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK_CONFESSION_title_V2_9
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e932f7af4b0d2460800000000000000
+      internalID: 7218438214492764646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK_CONFESSION_title_V2_10
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73f06e0d1ef184940800000000000000
+      internalID: 5280505617824747319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK_CONFESSION_title_V2_11
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 0
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 764ca21d69f1dece0800000000000000
+      internalID: -1374407578663336857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK_CONFESSION_title_V2_12
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed952bdd10e253350800000000000000
+      internalID: 5995749064462981598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK_CONFESSION_title_V2_13
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 0
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c760244d81d5c7110800000000000000
+      internalID: 1259984356978591356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK_CONFESSION_title_V2_14
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1e6b8b911ee9f400800000000000000
+      internalID: 358579404744125983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DARK_CONFESSION_title_V2_15
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 256
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a419ee80620dd620800000000000000
+      internalID: 2800397157032072356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1c1416a84311705428debc284220e2a6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      DARK_CONFESSION_title_V2_0: -2637452327914516828
+      DARK_CONFESSION_title_V2_1: -3163277649559936805
+      DARK_CONFESSION_title_V2_10: 5280505617824747319
+      DARK_CONFESSION_title_V2_11: -1374407578663336857
+      DARK_CONFESSION_title_V2_12: 5995749064462981598
+      DARK_CONFESSION_title_V2_13: 1259984356978591356
+      DARK_CONFESSION_title_V2_14: 358579404744125983
+      DARK_CONFESSION_title_V2_15: 2800397157032072356
+      DARK_CONFESSION_title_V2_2: 2958074849514452891
+      DARK_CONFESSION_title_V2_3: -2121313612537989922
+      DARK_CONFESSION_title_V2_4: 3160047142684173779
+      DARK_CONFESSION_title_V2_5: 5967984936361612228
+      DARK_CONFESSION_title_V2_6: 8512042251787800662
+      DARK_CONFESSION_title_V2_7: -2798446256606504964
+      DARK_CONFESSION_title_V2_8: 2545552665279687025
+      DARK_CONFESSION_title_V2_9: 7218438214492764646
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
