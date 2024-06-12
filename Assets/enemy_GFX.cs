@@ -19,5 +19,13 @@ public class enemy_GFX : MonoBehaviour
         {
             anim.SetFloat("x", aiPath.desiredVelocity.x);
         }
+        
+        if (aiPath.velocity.magnitude > 0.01f)
+        {
+            anim.SetBool("moving", true);
+        } else
+        {
+            anim.SetBool("moving", false);
+        }
     }
 }

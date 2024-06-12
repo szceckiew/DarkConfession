@@ -2461,7 +2461,7 @@ Transform:
   m_GameObject: {fileID: 535139599}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.62, y: -16.88, z: 0}
+  m_LocalPosition: {x: -5.5, y: -14.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2742,6 +2742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa9d1f85176ffa4ca3202bd07b1a232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 587115035}
   speed: 1
   waitTime: 0.3
   pathHolder: {fileID: 88503568}
@@ -2749,7 +2750,7 @@ MonoBehaviour:
   targetWaypointIndex: 1
   distanceToTarget: 0
   aipath: {fileID: 587115030}
-  playerMovementController: {fileID: 0}
+  playerMovementController: {fileID: 1856375783}
   destinationSetter: {fileID: 587115029}
   detectorSize: {x: 1, y: 1}
   detectorOriginOffset: {x: 0, y: 0}
@@ -2763,7 +2764,6 @@ MonoBehaviour:
     m_Bits: 0
   gizmoIdleColor: {r: 0, g: 1, b: 0, a: 1}
   gizmoDetectedColor: {r: 1, g: 0, b: 0, a: 1}
-  playerCollider: {fileID: 1856375782}
   guardState: 0
 --- !u!114 &587115029
 MonoBehaviour:
@@ -2947,7 +2947,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.25
+  m_Radius: 0.225
 --- !u!1 &598101674
 GameObject:
   m_ObjectHideFlags: 0
@@ -8154,7 +8154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAIIexxrAZcZgIAACIFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VEtz2jAQ/iuMziVjkZRHb60hpIcEJqSTiy/CWmMNsuSR5PDI8N+7km3skumJ5dtvd799yJ9EKFtC6rRZGsGfNQfyY0C8Tb4NOucTHNlOq404Q8t5F9zlnsQC55U5oRGnPszqApwR6U+1k54cIVgpkWlTLPgOYm2dRThj0gK6jHY+WiH0OSBH/BnOfMgJrdHEW2e0ZtHggmYKyoHpqC1xSKcNseZVKpWsKIF70R2d0rvR9yYk2IGssKmGF93RQEi1lMI2qog7laHrTZmDAd82FwybDEro3QMCOYhd7rzkfvQqyyy4Rqdhp7kwOK06Lfml6xEWzO5riR9MVr7QlM5GQVmd9fkLYUiDOzO6eGoL08gXcblI96/slDLrekPuw/Oe9jCqA5N7tpXwnoN60UujK8XR6UzlQysLo3n399pbnEO67/Baagu2davy667alfomLqH/YyxFsQ3jf6iBjdRh5OESwOCCfqPicCe2SYGol/HHwhvb9Q+qcTwKYx26mjaV17fVlfFUsghD8+1ULtZGgelnKEEx6U5rzONut3jj+3/UI/Nvp6ne+NoncRMS4I4fRTeutT5c12VzfXgGm68qJ4WCbgHe8YKDirVS9ZH1W2rDNpXJWNoL21WC/3tcJALGKWPTKR9TRmeT4cN9Nt5mE8rH03E2uZ+QcH1CYZ9MrmuhzXhwbapLrvDS2k/KYGlYGQ6eG3ZYinOhbccUKtOb1ACoVZ3hKhwMFsHXyRdc4IA24JxQYeHkMyFSp3vgyTVREjpdHJ1hSZclIaX40M4jCYnDNyQhHr5e89rAh4CDL94mu5DLX1BLAwQUAAAICAAACCHshWIjGG0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0kkFqYophYqKFRYqZYaKhpbmuiXGaWVKauWGKmYVZmrmxuVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAACCHscawGXGYCAAAiBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAACCHshWIjGG0AAAB4AAAACQAkAAAAAAAAAAAAAACzAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAGsDAAAAAA==
+    dataString: UEsDBBQAAAgIAAAIIeyiKD6gZgIAACEFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VEtz2jAQ/iuMzoWxSMqjt5YE0gOBCenk4ouw1liDLHkkmVeG/96VbGOXTE8s3367++1D/iRC2QISp83CCL7UHMiPHvE2+dZrnS9wYjutNuICDedDcJd5EgucN+aERpz6MKtzcEYkP9VOenKEYKlEqk3+zHcw09ZZhFMmLaDLaOejFUKfPXLCn/7Uh5zRGo69dUFrGvWuaCagHJiW2hD7dFITK16pEsnyArgX3dIpHQy/1yHBDmSFTdW8aEADIdFSClurIu5chK43RQYGfNtcMGwyKKGDEQIZiF3mvORu9CpNLbhap2HnJ2FwWlVa8ktXI8yZ3VcSD0yWvtCETodBWZV1+YXQp8GdGp2/NIVp5Iu4TCT7N3ZOmHWdIXfhp472MKojk3u2lfCRgXrVC6NLxdHpTOlDSwvDp/bvrbdZBsm+xSupDdjULYuvu2pW6pu4hv5PMynybRj/YwVspA4jD5cABhf0GxWHO7F1CkS9jD8W3tmue1C1Yy6Mdeiq21Re31aXxlPJHA0/+6R0M20UmG6CAhST7rzGNO5+iXe+/0fNmX86dfHa17yIu5AAt/wounOt9fG2LZvp4xJstiqdFAra+XvHK85pppWqbqzbUhO2KU3Kkk7YrhT839siETBOGZtM+IgyOh33Hx/S0TYdUz6ajNLxw5iE4xMK+2RyXQmtx4NbU21yhYfWfFF6C8OKcO/csONCXHJtW6ZQqd4kBkCtqgw34WCwCD5O/swFDmgDzgkV9k0+YyJ1sgce3xLFodPnkzMsbrPEpBAH7TwSk1n4hMTEw7djXhs4CDj64k2yK7n+BVBLAwQUAAAICAAACCHshWIjGG0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0kkFqYophYqKFRYqZYaKhpbmuiXGaWVKauWGKmYVZmrmxuVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAACCHsoig+oGYCAAAhBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAACCHshWIjGG0AAAB4AAAACQAkAAAAAAAAAAAAAACzAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAGsDAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
