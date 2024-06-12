@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class PlayerInteract : MonoBehaviour
 {
@@ -85,6 +86,7 @@ public class PlayerInteract : MonoBehaviour
                 interactable.GetComponent<Collider2D>().isTrigger = true;
                 //interactable.gameObject.layer = 0;
                 interactable.gameObject.transform.GetChild(0).transform.GetChild(0).gameObject.layer = 0;
+                interactable.GetComponent<ShadowCaster2D>().enabled = false;
                 Debug.Log("You opened a door");
 
                 break;
@@ -92,6 +94,7 @@ public class PlayerInteract : MonoBehaviour
                 interactable.GetComponent<SpriteRenderer>().sprite = doorSprites[0];
                 interactable.GetComponent<Collider2D>().isTrigger = false;
                 interactable.gameObject.transform.GetChild(0).transform.GetChild(0).gameObject.layer = 12;
+                interactable.GetComponent<ShadowCaster2D>().enabled = true;
 
 
                 Debug.Log("You closed a door");
