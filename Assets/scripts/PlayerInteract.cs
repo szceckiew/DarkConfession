@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
+    public AreaDetection exitArea;
+    public CharacterText winnableText;
+    
     public GameObject interactibleObject;
     public float interactValue;
     public float interactRange = 0.7f;
@@ -14,6 +17,7 @@ public class PlayerInteract : MonoBehaviour
     public LayerMask InteractableLayer;
 
     public Sprite[] doorSprites;
+    public Sprite chestOpen;
 
 
     void Start()
@@ -78,6 +82,13 @@ public class PlayerInteract : MonoBehaviour
                 interactable.GetComponent<Renderer>().enabled = false;
                 interactable.GetComponent<Collider2D>().enabled = false;
                 Debug.Log("You interacted with a green Dot: It disappeared");
+                break;
+
+            case "chest_0":
+                interactable.GetComponent<SpriteRenderer>().sprite = chestOpen;
+                exitArea.winnable = true;
+                winnableText.winnable = true;
+                Debug.Log("chest_0");
                 break;
 
             case "dungeon_tiles_export_62":

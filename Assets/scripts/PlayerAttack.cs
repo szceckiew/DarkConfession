@@ -21,6 +21,7 @@ public class PlayerAttack : MonoBehaviour
     public float fireForce = 10f;
     float shootCooldown = 0.25f;
     float shootTimer = 0.5f;
+    public int ammo = 3;
 
     public void Attack()
     {
@@ -36,8 +37,9 @@ public class PlayerAttack : MonoBehaviour
 
     public void Fire()
     {
-        if (shootTimer > shootCooldown)
+        if (shootTimer > shootCooldown && ammo > 0)
         {
+            ammo--;
             shootTimer = 0f;
             GameObject intBullet = Instantiate(bullet, Aim.position, Aim.rotation);
             intBullet.GetComponent<Rigidbody2D>().AddForce(-Aim.up * fireForce, ForceMode2D.Impulse);

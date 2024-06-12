@@ -11,5 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/victoryScreen.unity
+    guid: b8ab3a7dbd0d4d64cbb8316fde686afc
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
