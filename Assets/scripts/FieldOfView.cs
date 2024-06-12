@@ -12,7 +12,7 @@ public class FieldOfView : MonoBehaviour
     private float startingAngle = 0;
 
     private List<SpriteRenderer> enemyRenderers;
-    private GameObject[] enemies;
+    public GameObject[] enemiess;
 
     private GameObject player;
 
@@ -25,7 +25,7 @@ public class FieldOfView : MonoBehaviour
         fov = 360f;
         origin = Vector3.zero;
 
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        enemiess = GameObject.FindGameObjectsWithTag("Enemy");
 
         player = GameObject.FindGameObjectWithTag("Player");
 
@@ -93,7 +93,7 @@ public class FieldOfView : MonoBehaviour
         mesh.uv = uv;
         mesh.triangles = triangles;
     
-        foreach (GameObject enemy in enemies)
+        foreach (GameObject enemy in enemiess)
         {
             RaycastHit2D enemyHit = Physics2D.Raycast(player.transform.position, (enemy.transform.position - player.transform.position).normalized, viewDistance, detectorLayerMask);
             
@@ -108,6 +108,8 @@ public class FieldOfView : MonoBehaviour
                 Debug.Log("bbb");
             }
             Debug.Log(enemyHit.rigidbody);
+
+            Debug.DrawRay(player.transform.position, enemy.transform.position);
         }
 
     }
