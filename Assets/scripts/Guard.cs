@@ -1,5 +1,6 @@
 using JetBrains.Annotations;
 using Pathfinding;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +21,37 @@ public class Guard : MonoBehaviour
     //Pathfinding
     public PlayerMovementController playerMovementController;
     public AIDestinationSetter destinationSetter;
+
+
+    //Player detection
+    public bool PlayerDetected { get; private set; }
+    public Vector2 DirectionToTarget => target.transform.position - detectorOrigin.position;
+    private Transform detectorOrigin;
+    public Vector2 detectorSize = Vector2.one;
+    public Vector2 detectorOriginOffset = Vector2.zero;
+
+    public float detectorRadius = 2;
+
+    public float detectionDelay = 0.3f;
+    public LayerMask detectorLayerMask;
+    public LayerMask visionLayerMask;
+
+    public Color gizmoIdleColor = Color.green;
+    public Color gizmoDetectedColor = Color.red;
+
+    private GameObject target;
+
+    public GameObject Target
+    {
+        get => target;
+        private set
+        {
+            target = value;
+            PlayerDetected = target != null;
+        }
+    }
+
+    private bool showGizmos = true;
 
     //guard states
     public enum guardStates
@@ -55,12 +87,21 @@ public class Guard : MonoBehaviour
         //Start default behaviour
         StartCoroutine(FollowPath(waypoints));
 
+        detectorOrigin = transform;
+
+        StartCoroutine(DetectionCoroutine());
+
+        detectorLayerMask |= (1 << 3);
+        detectorSize = new Vector2(5, 5);
+
+        visionLayerMask |= (1 << 7);
+        visionLayerMask |= (1 << 13);
     }
 
     //guard state update
     private void GuardStateUpdate()
     {
-        Debug.Log("Guard Status Update");
+        Debug.Log("Guard Status Update: " + guardState);
         switch (guardState)
         {
             case guardStates.Patrol:
@@ -124,8 +165,43 @@ public class Guard : MonoBehaviour
             yield return null;
         }
         destinationSetter.target = pathHolder.GetChild(targetWaypointIndex).transform;
+
+
+        //if (distanceToTarget < 1)
+        //{
+        //    GuardStateUpdate();
+        //}
+
         GuardStateUpdate();
 
+    }
+
+    IEnumerator DetectionCoroutine()
+    {
+        yield return new WaitForSeconds(detectionDelay);
+        PerformDetection();
+        StartCoroutine(DetectionCoroutine());
+    }
+
+    public void PerformDetection()
+    {
+        //Collider2D collider = Physics2D.OverlapBox((Vector2)detectorOrigin.position + detectorOriginOffset, detectorSize, 0, detectorLayerMask);
+        Collider2D collider = Physics2D.OverlapCircle((Vector2)detectorOrigin.position + detectorOriginOffset, detectorRadius, detectorLayerMask);
+
+        RaycastHit2D haveLoSToPlayer = Physics2D.Raycast((Vector2)detectorOrigin.position + detectorOriginOffset, playerMovementController.transform.position, distance: Vector2.Distance(playerMovementController.transform.position, transform.position), layerMask: visionLayerMask);
+        if (collider != null && haveLoSToPlayer.collider == null)
+        {
+            Target = collider.gameObject;
+            guardState = guardStates.Chase;
+        }
+        else
+        {
+            Target = null;
+            guardState = guardStates.Patrol;
+        }
+
+        Debug.Log(haveLoSToPlayer.collider);
+        //GuardStateUpdate();
     }
 
     public void Die()
@@ -144,14 +220,27 @@ public class Guard : MonoBehaviour
     //Gizmos drawing
     private void OnDrawGizmos()
     {
-        Vector3 startPosition = pathHolder.GetChild(0).position;
-        Vector3 previousPosition = startPosition;
-        foreach (Transform waypoint in pathHolder)
+        if (showGizmos)
         {
-            Gizmos.DrawSphere(waypoint.position, .1f);
-            Gizmos.DrawLine(previousPosition, waypoint.position);
-            previousPosition = waypoint.position;
+            Vector3 startPosition = pathHolder.GetChild(0).position;
+            Vector3 previousPosition = startPosition;
+            foreach (Transform waypoint in pathHolder)
+            {
+                Gizmos.DrawSphere(waypoint.position, .1f);
+                Gizmos.DrawLine(previousPosition, waypoint.position);
+                previousPosition = waypoint.position;
+            }
+            Gizmos.DrawLine(previousPosition, startPosition);
+
+            if (detectorOrigin != null)
+            {
+                if (PlayerDetected)
+                {
+                    Gizmos.color = gizmoDetectedColor;
+                }
+                //Gizmos.DrawCube((Vector2)detectorOrigin.position + detectorOriginOffset, detectorSize);
+                Gizmos.DrawSphere((Vector2)detectorOrigin.position + detectorOriginOffset, detectorRadius);
+            }
         }
-        Gizmos.DrawLine(previousPosition, startPosition);
     }
 }
