@@ -7,6 +7,10 @@ using UnityEngine;
 
 public class Guard : MonoBehaviour
 {
+    //animation and movement
+    public Animator animator;
+
+
     //Patrolling
     public float speed = 1;
     public float waitTime = .3f;
@@ -119,22 +123,19 @@ public class Guard : MonoBehaviour
     //patrolling loop
     IEnumerator FollowPath(Transform[] waypoints)
     {
-        Debug.Log("FollowPath active");
 
+        animator.SetBool("moving", true);
         //patrolling
         //transform.position = waypoints[0];
         destinationSetter.target = targetWaypoint;
 
         while (guardState == guardStates.Patrol)
         {
-            Debug.Log("FollowPath active in while");
             if (aipath.path != null)
-
-                Debug.Log("FollowPath active 1st if");
             {
                 if (aipath.path.GetTotalLength() <= 0.5)
                 {
-                    Debug.Log("FollowPath active 2nd if");
+                    animator.SetBool("moving", false);
                     targetWaypointIndex = (targetWaypointIndex + 1) % waypoints.Length;
                     targetWaypoint = waypoints[targetWaypointIndex];
                     destinationSetter.target = targetWaypoint;
