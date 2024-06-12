@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-
+    public Animator knifeAnim;
+    public Animator gunAnim;
     public GameObject Circle;
 
     //melee attack
@@ -28,6 +29,8 @@ public class PlayerAttack : MonoBehaviour
             Circle.SetActive(true);
             isAttacking = true;
             //animation here
+            knifeAnim.SetBool("attack", true);
+            knifeAnim.SetTrigger("attackTrigger");
         }
     }
 
@@ -38,6 +41,9 @@ public class PlayerAttack : MonoBehaviour
             shootTimer = 0f;
             GameObject intBullet = Instantiate(bullet, Aim.position, Aim.rotation);
             intBullet.GetComponent<Rigidbody2D>().AddForce(-Aim.up * fireForce, ForceMode2D.Impulse);
+
+            //animation
+            gunAnim.SetTrigger("shootTrigger");
         }
     }
 
@@ -50,6 +56,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 atkTimer = 0f;
                 isAttacking= false;
+                knifeAnim.SetBool("attack", false);
                 Circle.SetActive(false);
             }
         }
