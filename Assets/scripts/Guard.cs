@@ -78,6 +78,7 @@ public class Guard : MonoBehaviour
     //patrolling loop
     IEnumerator FollowPath(Transform[] waypoints)
     {
+        Debug.Log("FollowPath active");
 
         //patrolling
         //transform.position = waypoints[0];
@@ -85,10 +86,14 @@ public class Guard : MonoBehaviour
 
         while (guardState == guardStates.Patrol)
         {
+            Debug.Log("FollowPath active in while");
             if (aipath.path != null)
+
+                Debug.Log("FollowPath active 1st if");
             {
                 if (aipath.path.GetTotalLength() <= 0.5)
                 {
+                    Debug.Log("FollowPath active 2nd if");
                     targetWaypointIndex = (targetWaypointIndex + 1) % waypoints.Length;
                     targetWaypoint = waypoints[targetWaypointIndex];
                     destinationSetter.target = targetWaypoint;
@@ -119,14 +124,8 @@ public class Guard : MonoBehaviour
             yield return null;
         }
         destinationSetter.target = pathHolder.GetChild(targetWaypointIndex).transform;
+        GuardStateUpdate();
 
-
-
-        if (distanceToTarget < 1)
-        {
-            GuardStateUpdate();
-        }
-        
     }
 
     public void Die()

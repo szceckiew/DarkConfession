@@ -1,0 +1,414 @@
+fileFormatVersion: 2
+guid: c6732171a441b65478e5556ebe5ec648
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1751101410975163652
+    second: guyWithAHood_IDLE_ANIM_0
+  - first:
+      213: -3086677349754801243
+    second: guyWithAHood_IDLE_ANIM_1
+  - first:
+      213: 7186140943869485842
+    second: guyWithAHood_IDLE_ANIM_2
+  - first:
+      213: -5125197629492542817
+    second: guyWithAHood_IDLE_ANIM_3
+  - first:
+      213: 9187631851132624988
+    second: guyWithAHood_IDLE_ANIM_4
+  - first:
+      213: -7733430206521000202
+    second: guyWithAHood_IDLE_ANIM_5
+  - first:
+      213: 816837395740198704
+    second: guyWithAHood_IDLE_ANIM_6
+  - first:
+      213: 8857447359278653016
+    second: guyWithAHood_IDLE_ANIM_7
+  - first:
+      213: 6776178941232841327
+    second: guyWithAHood_IDLE_ANIM_8
+  - first:
+      213: -1062565847798128029
+    second: guyWithAHood_IDLE_ANIM_9
+  - first:
+      213: 224672365277768505
+    second: guyWithAHood_IDLE_ANIM_10
+  - first:
+      213: 7073950684484743189
+    second: guyWithAHood_IDLE_ANIM_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: guyWithAHood_IDLE_ANIM_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfad3216b86d2b7e0800000000000000
+      internalID: -1751101410975163652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guyWithAHood_IDLE_ANIM_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 1
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a3fe97ed4be925d0800000000000000
+      internalID: -3086677349754801243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guyWithAHood_IDLE_ANIM_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2132b395d1d4ab360800000000000000
+      internalID: 7186140943869485842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guyWithAHood_IDLE_ANIM_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 1
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f924c6219e3afd8b0800000000000000
+      internalID: -5125197629492542817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guyWithAHood_IDLE_ANIM_4
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5023dd8d76018f70800000000000000
+      internalID: 9187631851132624988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guyWithAHood_IDLE_ANIM_5
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 1
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fe3a0d53365da490800000000000000
+      internalID: -7733430206521000202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guyWithAHood_IDLE_ANIM_6
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 037895c984df55b00800000000000000
+      internalID: 816837395740198704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guyWithAHood_IDLE_ANIM_7
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 1
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85e968ac179fbea70800000000000000
+      internalID: 8857447359278653016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guyWithAHood_IDLE_ANIM_8
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f628aa668d2d90e50800000000000000
+      internalID: 6776178941232841327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guyWithAHood_IDLE_ANIM_9
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 362e78bbdf10141f0800000000000000
+      internalID: -1062565847798128029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guyWithAHood_IDLE_ANIM_10
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b6a3b63523e1300800000000000000
+      internalID: 224672365277768505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: guyWithAHood_IDLE_ANIM_11
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 1
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 510385b0ba8bb2260800000000000000
+      internalID: 7073950684484743189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3ef5bed042633ca4881450776b029604
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      guyWithAHood_IDLE_ANIM_0: -1751101410975163652
+      guyWithAHood_IDLE_ANIM_1: -3086677349754801243
+      guyWithAHood_IDLE_ANIM_10: 224672365277768505
+      guyWithAHood_IDLE_ANIM_11: 7073950684484743189
+      guyWithAHood_IDLE_ANIM_2: 7186140943869485842
+      guyWithAHood_IDLE_ANIM_3: -5125197629492542817
+      guyWithAHood_IDLE_ANIM_4: 9187631851132624988
+      guyWithAHood_IDLE_ANIM_5: -7733430206521000202
+      guyWithAHood_IDLE_ANIM_6: 816837395740198704
+      guyWithAHood_IDLE_ANIM_7: 8857447359278653016
+      guyWithAHood_IDLE_ANIM_8: 6776178941232841327
+      guyWithAHood_IDLE_ANIM_9: -1062565847798128029
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

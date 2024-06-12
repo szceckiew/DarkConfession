@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PlayerMovementController : MonoBehaviour
 {
+    public Animator anim;
+    
     [SerializeField] private FieldOfView fieldOfView;
     public float moveSpeed = 4;
     public Rigidbody2D rb2d;
     private Vector2 moveInput;
 
-    bool isMoving = false;
+    public bool isMoving = false;
     public Transform attackPoint;
     public Vector2 lastMoveDirection;
 
@@ -39,6 +41,15 @@ public class PlayerMovementController : MonoBehaviour
             isMoving = true;
         }
 
+        // animation
+        if (isMoving)
+        {
+            anim.SetFloat("x", moveInput.x);
+            anim.SetFloat("y", moveInput.y);
+        }
+        anim.SetBool("moving", isMoving);
+
+
         fieldOfView.SetOrigin(transform.position);
 
     }
@@ -54,4 +65,6 @@ public class PlayerMovementController : MonoBehaviour
         }
         rb2d.MovePosition(rb2d.position + moveInput * moveSpeed * Time.fixedDeltaTime);        
     }
+
+  
 }
