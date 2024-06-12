@@ -2461,7 +2461,7 @@ Transform:
   m_GameObject: {fileID: 535139599}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.4, y: -14.68, z: 0}
+  m_LocalPosition: {x: -6.62, y: -16.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2651,9 +2651,9 @@ GameObject:
   - component: {fileID: 587115030}
   - component: {fileID: 587115029}
   - component: {fileID: 587115033}
-  - component: {fileID: 587115034}
   - component: {fileID: 587115035}
   - component: {fileID: 587115036}
+  - component: {fileID: 587115037}
   m_Layer: 9
   m_Name: basicEnemy_0
   m_TagString: Untagged
@@ -2751,6 +2751,19 @@ MonoBehaviour:
   aipath: {fileID: 587115030}
   playerMovementController: {fileID: 0}
   destinationSetter: {fileID: 587115029}
+  detectorSize: {x: 1, y: 1}
+  detectorOriginOffset: {x: 0, y: 0}
+  detectorRadius: 2
+  detectionDelay: 0.3
+  detectorLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  visionLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  gizmoIdleColor: {r: 0, g: 1, b: 0, a: 1}
+  gizmoDetectedColor: {r: 1, g: 0, b: 0, a: 1}
+  playerCollider: {fileID: 1856375782}
   guardState: 0
 --- !u!114 &587115029
 MonoBehaviour:
@@ -2863,52 +2876,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &587115034
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 587115025}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
-    newSize: {x: 0.49, y: 0.49}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.45, y: 0.45}
-  m_EdgeRadius: 0
 --- !u!95 &587115035
 Animator:
   serializedVersion: 7
@@ -2945,6 +2912,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aiPath: {fileID: 587115030}
   anim: {fileID: 587115035}
+--- !u!58 &587115037
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587115025}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.25
 --- !u!1 &598101674
 GameObject:
   m_ObjectHideFlags: 0
@@ -8151,7 +8154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAIIewnkEG+YgIAABoFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VEtz2jAQ/iuMziVjkwyP3lpCSA8JTGgnF18Wa401yJJHksMjw3/vSraxS6Ynlm+/3f32IX8yoWyJqdNmaQR/0RzZ9wHzNvs26JzPeISdVhtxxpbzLrjLPQkC5w2c0ITHPszqAp0R6Q+1k54cEVgpkWlTLPgO59o6S3AG0iK5jHY+WhH0OWBH+hnOfMiJrNHEW2eyZtHgQmaKyqHpqC1xGE8bYs2rVCqhKJF70R09sE7BCDRF7TSM6G7k82sphW3UMHcqQ7ebMkeDvl0ugJoLCuK7BwJyFLvcean96FWWWXSNPgOnR2FoSnVa9lPXoyvA7mtpHyArX2gaz0ZBV5315QthGAd3ZnTx3BaOI1/E5SLdv8EpBet6w+3Djz3tYUQHkHvYSnzPUb3qpdGV4uR0pvKhlcXRY/f32ts8x3Tf4bXUFmzrVuXXHbWr9E1cQv/HuRTFNgz/oQY2UoeRhwtAQ+v5RYrDfdgmBaFexh+Lv2HXP6TG8SSMdeRq2lRe31ZXxlPZIgzNt1O5uTYKTT9DiQqkO60pj7vd4o3v/1FP4N9MU73xtU/hJiTAHT+Kblxrfbiuy+b68II2X1VOCoXdArzjlQY110rVR9ZvqQ3bVCaDtBe2qwT/97hYhMBjgOmUj2OIZ5Phw3023maTmI+n42xyP2Hh+oSiPkGua6HNeGhtqkuu6NLaT8lgaaAMB88NHJbiXGjbMYXK9CY1iGpVZ7gKR0NF6G3yBRc0oA06J1RYOPtMmNTpHnlyTZSEThdHZyDpsiSsFB/aeSRh8/DtSJiHr9e8Nvgh8OCLt8ku7PIXUEsDBBQAAAgIAAAIIeyFYiMYbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrSSQWpiimFiooVFiplhoqGlua6JcZpZUpq5YYqZhVmaubG5UixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAIIewnkEG+YgIAABoFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIeyFYiMYbQAAAHgAAAAJACQAAAAAAAAAAAAAAK8CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAZwMAAAAA
+    dataString: UEsDBBQAAAgIAAAIIexxrAZcZgIAACIFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VEtz2jAQ/iuMziVjkZRHb60hpIcEJqSTiy/CWmMNsuSR5PDI8N+7km3skumJ5dtvd799yJ9EKFtC6rRZGsGfNQfyY0C8Tb4NOucTHNlOq404Q8t5F9zlnsQC55U5oRGnPszqApwR6U+1k54cIVgpkWlTLPgOYm2dRThj0gK6jHY+WiH0OSBH/BnOfMgJrdHEW2e0ZtHggmYKyoHpqC1xSKcNseZVKpWsKIF70R2d0rvR9yYk2IGssKmGF93RQEi1lMI2qog7laHrTZmDAd82FwybDEro3QMCOYhd7rzkfvQqyyy4Rqdhp7kwOK06Lfml6xEWzO5riR9MVr7QlM5GQVmd9fkLYUiDOzO6eGoL08gXcblI96/slDLrekPuw/Oe9jCqA5N7tpXwnoN60UujK8XR6UzlQysLo3n399pbnEO67/Baagu2davy667alfomLqH/YyxFsQ3jf6iBjdRh5OESwOCCfqPicCe2SYGol/HHwhvb9Q+qcTwKYx26mjaV17fVlfFUsghD8+1ULtZGgelnKEEx6U5rzONut3jj+3/UI/Nvp6ne+NoncRMS4I4fRTeutT5c12VzfXgGm68qJ4WCbgHe8YKDirVS9ZH1W2rDNpXJWNoL21WC/3tcJALGKWPTKR9TRmeT4cN9Nt5mE8rH03E2uZ+QcH1CYZ9MrmuhzXhwbapLrvDS2k/KYGlYGQ6eG3ZYinOhbccUKtOb1ACoVZ3hKhwMFsHXyRdc4IA24JxQYeHkMyFSp3vgyTVREjpdHJ1hSZclIaX40M4jCYnDNyQhHr5e89rAh4CDL94mu5DLX1BLAwQUAAAICAAACCHshWIjGG0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0kkFqYophYqKFRYqZYaKhpbmuiXGaWVKauWGKmYVZmrmxuVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAACCHscawGXGYCAAAiBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAACCHshWIjGG0AAAB4AAAACQAkAAAAAAAAAAAAAACzAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAGsDAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 

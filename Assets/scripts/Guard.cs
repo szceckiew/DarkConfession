@@ -39,6 +39,8 @@ public class Guard : MonoBehaviour
     public Color gizmoIdleColor = Color.green;
     public Color gizmoDetectedColor = Color.red;
 
+    public Collider2D playerCollider;
+
     private GameObject target;
 
     public GameObject Target
@@ -94,6 +96,7 @@ public class Guard : MonoBehaviour
         detectorLayerMask |= (1 << 3);
         detectorSize = new Vector2(5, 5);
 
+        visionLayerMask |= (1 << 3);
         visionLayerMask |= (1 << 7);
         visionLayerMask |= (1 << 13);
     }
@@ -119,7 +122,6 @@ public class Guard : MonoBehaviour
     //patrolling loop
     IEnumerator FollowPath(Transform[] waypoints)
     {
-        Debug.Log("FollowPath active");
 
         //patrolling
         //transform.position = waypoints[0];
@@ -127,21 +129,17 @@ public class Guard : MonoBehaviour
 
         while (guardState == guardStates.Patrol)
         {
-            Debug.Log("FollowPath active in while");
             if (aipath.path != null)
-
-                Debug.Log("FollowPath active 1st if");
             {
                 if (aipath.path.GetTotalLength() <= 0.5)
                 {
-                    Debug.Log("FollowPath active 2nd if");
                     targetWaypointIndex = (targetWaypointIndex + 1) % waypoints.Length;
                     targetWaypoint = waypoints[targetWaypointIndex];
                     destinationSetter.target = targetWaypoint;
                     yield return new WaitForSeconds(waitTime);
                 }
             }
-            
+
 
             yield return null;
         }
@@ -189,7 +187,7 @@ public class Guard : MonoBehaviour
         Collider2D collider = Physics2D.OverlapCircle((Vector2)detectorOrigin.position + detectorOriginOffset, detectorRadius, detectorLayerMask);
 
         RaycastHit2D haveLoSToPlayer = Physics2D.Raycast((Vector2)detectorOrigin.position + detectorOriginOffset, playerMovementController.transform.position, distance: Vector2.Distance(playerMovementController.transform.position, transform.position), layerMask: visionLayerMask);
-        if (collider != null && haveLoSToPlayer.collider == null)
+        if (collider != null && haveLoSToPlayer.collider == playerCollider)
         {
             Target = collider.gameObject;
             guardState = guardStates.Chase;
