@@ -5,7 +5,11 @@ using UnityEngine;
 public class PlayerMovementController : MonoBehaviour
 {
     public Animator anim;
-    
+    public Animator gunAnim;
+    public SpriteRenderer gunRenderer;
+    [SerializeField] private string gunLayerForground;
+    [SerializeField] private string gunLayerBackground;
+
     [SerializeField] private FieldOfView fieldOfView;
     public float moveSpeed = 4;
     public Rigidbody2D rb2d;
@@ -27,6 +31,7 @@ public class PlayerMovementController : MonoBehaviour
     {
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
+        moveInput.Normalize();
 
         if (moveInput.x == 0 && moveInput.y == 0)
         {
@@ -44,8 +49,20 @@ public class PlayerMovementController : MonoBehaviour
         // animation
         if (isMoving)
         {
+            //character and gun rotation
             anim.SetFloat("x", moveInput.x);
+            gunAnim.SetFloat("x", moveInput.x);
             anim.SetFloat("y", moveInput.y);
+            gunAnim.SetFloat("y", moveInput.y);
+
+            //gun layer
+            if (moveInput.y > 0.01f)
+            {
+                gunRenderer.sortingLayerName = gunLayerBackground;
+            } else
+            {
+                gunRenderer.sortingLayerName = gunLayerForground;
+            }
         }
         anim.SetBool("moving", isMoving);
 

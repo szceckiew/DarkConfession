@@ -80,7 +80,7 @@ public class PlayerInteract : MonoBehaviour
                 Debug.Log("You interacted with a green Dot: It disappeared");
                 break;
 
-            case "simpleDoorSheet_0":
+            case "dungeon_tiles_export_62":
                 interactable.GetComponent<SpriteRenderer>().sprite = doorSprites[1];
                 interactable.GetComponent<Collider2D>().isTrigger = true;
                 //interactable.gameObject.layer = 0;
@@ -88,7 +88,7 @@ public class PlayerInteract : MonoBehaviour
                 Debug.Log("You opened a door");
 
                 break;
-            case "simpleDoorSheet_1":
+            case "dungeon_tiles_export_64":
                 interactable.GetComponent<SpriteRenderer>().sprite = doorSprites[0];
                 interactable.GetComponent<Collider2D>().isTrigger = false;
                 interactable.gameObject.transform.GetChild(0).transform.GetChild(0).gameObject.layer = 12;
@@ -101,6 +101,7 @@ public class PlayerInteract : MonoBehaviour
 
             default:
                 Debug.Log("ERROR: Interacted with something unknown");
+                Debug.Log(interactable.GetComponent<SpriteRenderer>().sprite.name);
                 break;
         }
     }

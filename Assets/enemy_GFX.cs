@@ -7,17 +7,21 @@ public class enemy_GFX : MonoBehaviour
 {
     public AIPath aiPath;
     public Animator anim;
+    float x;
+    float y;
 
     // Update is called once per frame
     void Update()
     {
-        if(aiPath.desiredVelocity.y >= 0.01f || aiPath.desiredVelocity.y <= -0.01f)
+        x = aiPath.desiredVelocity.x;
+        y = aiPath.desiredVelocity.y;
+        if (y >= 0.01f || y <= -0.01f)
         {
-            anim.SetFloat("y", aiPath.desiredVelocity.y);
+            anim.SetFloat("y", y);
         }
-        if (aiPath.desiredVelocity.x >= 0.01f || aiPath.desiredVelocity.x <= -0.01f)
+        if (x >= 0.01f || x <= -0.01f)
         {
-            anim.SetFloat("x", aiPath.desiredVelocity.x);
+            anim.SetFloat("x", x);
         }
         
         if (aiPath.velocity.magnitude > 0.01f)
