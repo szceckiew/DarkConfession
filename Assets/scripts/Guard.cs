@@ -13,7 +13,7 @@ public class Guard : MonoBehaviour
 
     //Patrolling
     public float speed = 1;
-    public float waitTime = .3f;
+    public float waitTime = .1f;
     public Transform pathHolder;
     [SerializeField] public Transform[] waypoints;
     Transform targetWaypoint;
@@ -42,6 +42,10 @@ public class Guard : MonoBehaviour
 
     public Color gizmoIdleColor = Color.green;
     public Color gizmoDetectedColor = Color.red;
+
+    public Collider2D playerCollider;
+
+    public SpriteRenderer sr;
 
     private GameObject target;
 
@@ -98,8 +102,11 @@ public class Guard : MonoBehaviour
         detectorLayerMask |= (1 << 3);
         detectorSize = new Vector2(5, 5);
 
+        visionLayerMask |= (1 << 3);
         visionLayerMask |= (1 << 7);
         visionLayerMask |= (1 << 13);
+
+        sr = GetComponent<SpriteRenderer>();   
     }
 
     //guard state update
@@ -142,7 +149,7 @@ public class Guard : MonoBehaviour
                     yield return new WaitForSeconds(waitTime);
                 }
             }
-            
+
 
             yield return null;
         }
@@ -189,8 +196,9 @@ public class Guard : MonoBehaviour
         //Collider2D collider = Physics2D.OverlapBox((Vector2)detectorOrigin.position + detectorOriginOffset, detectorSize, 0, detectorLayerMask);
         Collider2D collider = Physics2D.OverlapCircle((Vector2)detectorOrigin.position + detectorOriginOffset, detectorRadius, detectorLayerMask);
 
-        RaycastHit2D haveLoSToPlayer = Physics2D.Raycast((Vector2)detectorOrigin.position + detectorOriginOffset, playerMovementController.transform.position, distance: Vector2.Distance(playerMovementController.transform.position, transform.position), layerMask: visionLayerMask);
-        if (collider != null && haveLoSToPlayer.collider == null)
+        RaycastHit2D haveLoSToPlayer = Physics2D.Raycast((Vector2)detectorOrigin.position + detectorOriginOffset, playerMovementController.transform.position.normalized, distance: Vector2.Distance(playerMovementController.transform.position, transform.position), layerMask: visionLayerMask);
+        //RaycastHit2D enemyInPlayerVision = Physics2D.Raycast((Vector2)detectorOrigin.position + detectorOriginOffset, playerMovementController.transform.position.normalized, distance: FieldOfView.distance, layerMask: detectorLayerMask);
+        if (collider != null && haveLoSToPlayer.collider == playerCollider)
         {
             Target = collider.gameObject;
             guardState = guardStates.Chase;
@@ -200,6 +208,15 @@ public class Guard : MonoBehaviour
             Target = null;
             guardState = guardStates.Patrol;
         }
+
+        //if (enemyInPlayerVision.collider == null)
+        //{
+        //    sr.enabled = false;
+        //}
+        //else
+        //{
+        //    sr.enabled = true;
+        //}
 
         Debug.Log(haveLoSToPlayer.collider);
         //GuardStateUpdate();

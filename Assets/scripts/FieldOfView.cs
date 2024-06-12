@@ -11,6 +11,13 @@ public class FieldOfView : MonoBehaviour
     private Vector3 origin;
     private float startingAngle = 0;
 
+    private List<SpriteRenderer> enemyRenderers;
+    private GameObject[] enemies;
+
+    private GameObject player;
+
+    public LayerMask detectorLayerMask;
+
     private void Start()
     {
         mesh = new Mesh();
@@ -18,6 +25,19 @@ public class FieldOfView : MonoBehaviour
         fov = 360f;
         origin = Vector3.zero;
 
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        //foreach (GameObject enemy in enemies)
+        //{
+        //    SpriteRenderer sr = enemy.GetComponent<SpriteRenderer>();
+        //    enemyRenderers.Add(sr);
+        //}
+
+        detectorLayerMask |= (1 << 7);
+        detectorLayerMask |= (1 << 9);
+        detectorLayerMask |= (1 << 13);
     }
 
     private void LateUpdate()
@@ -73,6 +93,23 @@ public class FieldOfView : MonoBehaviour
         mesh.uv = uv;
         mesh.triangles = triangles;
     
+        foreach (GameObject enemy in enemies)
+        {
+            RaycastHit2D enemyHit = Physics2D.Raycast(player.transform.position, (enemy.transform.position - player.transform.position).normalized, viewDistance, detectorLayerMask);
+            
+            if (enemyHit.collider.CompareTag("Enemy"))
+            {
+                enemy.GetComponent<SpriteRenderer>().enabled = true;
+                Debug.Log("aaa");
+            }
+            else
+            {
+                enemy.GetComponent<SpriteRenderer>().enabled = false;
+                Debug.Log("bbb");
+            }
+            Debug.Log(enemyHit.rigidbody);
+        }
+
     }
 
 
