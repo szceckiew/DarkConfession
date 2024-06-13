@@ -2882,7 +2882,7 @@ GameObject:
   - component: {fileID: 587115037}
   m_Layer: 9
   m_Name: basicEnemy_0
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3195,7 +3195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &598101675
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3263,9 +3263,11 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 12288
+  enemiess:
+  - {fileID: 587115025}
   detectorLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8832
 --- !u!4 &598101678
 Transform:
   m_ObjectHideFlags: 0
@@ -3864,7 +3866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1196050875
 Transform:
   m_ObjectHideFlags: 0
@@ -8626,7 +8628,7 @@ GameObject:
   - component: {fileID: 1856375787}
   m_Layer: 3
   m_Name: basicProtagonist_0
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

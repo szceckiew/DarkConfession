@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class doorEnemyOpen : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class doorEnemyOpen : MonoBehaviour
         if ((autoDoorOpenMask.value & (int)Math.Pow(2, collision.gameObject.layer)) > 0)
         {
             GetComponentInParent<SpriteRenderer>().sprite = doorSprites[1];
+            
+            GetComponentInParent<ShadowCaster2D>().enabled = false;
+
             GetComponentInParent<BoxCollider2D>().isTrigger = true;
             GetComponentInChildren<BoxCollider2D>().isTrigger = true;
             layerChanging.layer = 0;
@@ -33,6 +37,9 @@ public class doorEnemyOpen : MonoBehaviour
         if ((autoDoorOpenMask.value & (int)Math.Pow(2, collision.gameObject.layer)) > 0)
         {
             GetComponentInParent<SpriteRenderer>().sprite = doorSprites[0];
+
+            GetComponentInParent<ShadowCaster2D>().enabled = true;
+
             GetComponentInParent<BoxCollider2D>().isTrigger = false;
             GetComponentInChildren<BoxCollider2D>().isTrigger = true;
             layerChanging.layer = 12;
