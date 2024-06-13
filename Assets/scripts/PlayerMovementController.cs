@@ -11,7 +11,7 @@ public class PlayerMovementController : MonoBehaviour
     [SerializeField] private string gunLayerBackground;
 
     [SerializeField] private FieldOfView fieldOfView;
-    public float moveSpeed = 4;
+    public float moveSpeed = 2.5f;
     public Rigidbody2D rb2d;
     private Vector2 moveInput;
 

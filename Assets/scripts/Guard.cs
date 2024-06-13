@@ -9,6 +9,7 @@ public class Guard : MonoBehaviour
 {
     //animation and movement
     public Animator animator;
+    public SpriteRenderer stepRenderer;
 
 
     //Patrolling
@@ -229,6 +230,8 @@ public class Guard : MonoBehaviour
         GetComponent<Seeker>().enabled = false;
         GetComponent<AIPath>().enabled = false;
         GetComponent<AIDestinationSetter>().enabled = false;
+
+        stepRenderer.enabled = false;
 
         this.enabled = false;
     }
