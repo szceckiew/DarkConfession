@@ -10,7 +10,7 @@ public class PlayerInteract : MonoBehaviour
     
     public GameObject interactibleObject;
     public float interactValue;
-    public float interactRange = 0.7f;
+    public float interactRange = 0.35f;
     public bool canInteract = true;
     public float interactCooldown = 0.5f;
     public float interactTimer;
