@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Guard : MonoBehaviour
 {
@@ -221,6 +222,11 @@ public class Guard : MonoBehaviour
 
         Debug.Log(haveLoSToPlayer.collider);
         //GuardStateUpdate();
+
+        if (Vector2.Distance(playerMovementController.transform.position, transform.position) <= 0.3)
+        {
+            SceneManager.LoadScene(3);
+        }
     }
 
     public void Die()
