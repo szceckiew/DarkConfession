@@ -106,8 +106,6 @@ public class PlayerInteract : MonoBehaviour
                 interactable.GetComponent<Collider2D>().isTrigger = false;
                 interactable.gameObject.transform.GetChild(0).transform.GetChild(0).gameObject.layer = 12;
                 interactable.GetComponent<ShadowCaster2D>().enabled = true;
-
-
                 Debug.Log("You closed a door");
 
                 break;
